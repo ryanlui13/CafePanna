@@ -1,0 +1,226 @@
+/* phones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px; 
+        display: flex;
+        flex-direction: column;
+        column-count: 1;
+    }
+
+    .navbar-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navbar-links li a{
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .navbar-links li a:hover {
+    color: #E53935; /* Strawberry Red */
+    text-decoration: underline;
+    transition: 0.3s;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    p, li, a {
+        font-size: 25px;
+    }
+}
+
+/* tablets */
+@media (max-width: 768px) { 
+    .navbar{
+        padding: 15px;
+    }
+
+    .navbar-links{
+        width: 95%;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .navbar-links li a{
+        font-size: 30px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    p, li, a {
+        font-size: 25px;
+    }
+}
+/* computers*/
+@media (max-width: 1024px) {
+    .navbar-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    h1{
+        font-size: 60px;
+        z-index: 2;
+    }
+
+    h2 {
+        font-size: 40px;
+        z-index: 2;
+    }
+
+    p, li, a {
+        font-size: 25px;
+        z-index: 2;
+    }
+}
+
+body{
+    background-image: url("images/CafePannaImage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1, h3, h4 {
+    color: #6B2D39;
+}
+
+p, li, a {
+    color: #3C2A21;
+}
+
+.navbar{ /* nav bar background*/
+    background-color: #FAF9F6;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 4px solid #C6A68E;
+
+}
+
+.navbar-links{ /* link layout*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    width: 80%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #F5EBDC;
+    border: 25px solid #C6A68E;
+}
+
+.navbar-links li a{ /* actual links*/
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-family: 'Courier New';
+    padding: 10px;
+}
+
+#hallis-specials h2{
+    color: darkorchid;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border-bottom: 5px solid salmon;
+    padding-bottom: 10px;
+}
+
+.featured-container {
+    width: 100%;
+    margin-bottom: 50px;
+    overflow-x: auto;
+    display: flex;
+    white-space: nowrap;
+    gap: 15px;
+    padding-bottom: 20px;
+    background-color: #F3E5F5;
+}
+
+.featured-container img {
+    height: 300px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.MISSION {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    background-color: #F3E5F5;
+}
+
+.MENU {
+    clear: both;
+    display: block;
+    text-align: center;
+}
+
+.MENU table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.MENU th, .MENU td {
+    text-align: center;
+    border: 5px solid darksalmon;
+    padding: 15px;
+}
+
+.menu-table {
+    text-align: center;
+}
+
+.contact h2, .contact p {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    color: brown;
+}
+
+h1{
+    background-color: burlywood;
+    color: green;
+    border: 5px dashed darkgoldenrod;
+}
+
+
+iframe {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 20px solid darkgoldenrod;    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5EBDC;
+    color: #A0522D;
+    padding: 20px;
+}
