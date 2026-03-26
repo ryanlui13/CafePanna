@@ -4,24 +4,32 @@
         padding: 10px; 
         display: flex;
         flex-direction: column;
-        column-count: 1;
     }
 
     .navbar-links{
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
     .navbar-links li a{
         display: block;
+        color: #EDE5F2; 
         padding: 10px;
         font-size: 20px;
     }
 
     .navbar-links li a:hover {
-    color: #E53935; /* Strawberry Red */
+    color: #C4956A; /* Strawberry Red */
     text-decoration: underline;
     transition: 0.3s;
     }
@@ -35,19 +43,25 @@
     }
 
     p, li, a {
-        font-size: 25px;
+        font-size: 18px;
+    }
+
+    body {
+        background-attachment: scroll;
     }
 }
 
 /* tablets */
-@media (max-width: 768px) { 
+@media (min-width: 481px) and (max-width: 768px) { 
     .navbar{
         padding: 15px;
     }
 
     .navbar-links{
-        width: 95%;
+        flex-direction: column;
+        align-items: center; 
         gap: 15px;
+        width: 100%; 
         padding: 20px;
     }
 
@@ -68,7 +82,7 @@
     }
 }
 /* computers*/
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .navbar-links {
         flex-direction: row;
         justify-content: space-around;
@@ -99,7 +113,7 @@ body{
     background-size: cover;
 }
 
-h1, h3, h4 {
+h3, h4 {
     color: #6B2D39;
 }
 
@@ -108,7 +122,7 @@ p, li, a {
 }
 
 .navbar{ /* nav bar background*/
-    background-color: #FAF9F6;
+    background-color: #2C1A14;
     padding: 20px 0;
     display: flex;
     flex-direction: row;
@@ -135,16 +149,25 @@ p, li, a {
     flex-direction: row;
     font-weight: bold;
     font-family: 'Courier New';
+    color: #EDE5F2; /* lavendar color*/
     padding: 10px;
 }
 
+.navbar-links li a:hover{
+    color: #C4956A;
+}
+
 #hallis-specials h2{
-    color: darkorchid;
+    color: #6B2D39;
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
-    border-bottom: 5px solid salmon;
+    border-bottom: 5px dashed #6B5075;
     padding-bottom: 10px;
+}
+
+figcaption {
+    color: #6B5075; 
 }
 
 .featured-container {
@@ -154,8 +177,9 @@ p, li, a {
     display: flex;
     white-space: nowrap;
     gap: 15px;
-    padding-bottom: 20px;
-    background-color: #F3E5F5;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(250, 246, 240, 0.5);
 }
 
 .featured-container img {
@@ -169,30 +193,33 @@ p, li, a {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
-    background-color: #F3E5F5;
+    background-color: gba(250, 246, 240, 0.92);
+    padding: 12px;
 }
 
 .MENU {
     clear: both;
     display: block;
-    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(250, 246, 240, 0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
 }
 
 .MENU table {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     width: 80%;
     border-collapse: collapse;
 }
 
 .MENU th, .MENU td {
-    text-align: center;
-    border: 5px solid darksalmon;
+    border: 1px solid #C6A68E;
     padding: 15px;
-}
-
-.menu-table {
-    text-align: center;
+    color: #2C1A14;
 }
 
 .contact h2, .contact p {
@@ -203,24 +230,28 @@ p, li, a {
 }
 
 h1{
-    background-color: burlywood;
-    color: green;
-    border: 5px dashed darkgoldenrod;
+    background-color: #EDE5F2;
+    color: #2C1A14;
+    border: 5px solid #6B5075;
 }
 
-
 iframe {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    width: 90%;           /* stops it hitting the edges */
+    margin: 0 auto; 
     background-color: whitesmoke;
+    border-radius: 12px;
     padding: 10px;
-    border: 20px solid darkgoldenrod;    
+    border: 3px solid #C6A68E;    
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    background-color: #F5EBDC;
-    color: #A0522D;
+    background-color: rgba(250, 246, 240, 0.92);
+    color: #2C1A14;
     padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    margin: 2rem auto; 
 }
