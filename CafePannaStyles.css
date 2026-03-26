@@ -1,4 +1,3 @@
-/* phones */
 @media (max-width: 480px) {
     .navbar {
         padding: 10px; 
@@ -17,6 +16,7 @@
         width: 100%;
         align-items: center;
         gap: 20px;
+        border: none; 
     }
 
     .navbar img {
@@ -35,6 +35,7 @@
         background-color: #2C1A14;
         padding: 1rem 0;
         z-index: 999;
+        border: none; 
     }
 
     .hamburger {
@@ -243,9 +244,9 @@ figcaption {
 }
 
 .contact h2, .contact p {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     color: brown;
 }
 
