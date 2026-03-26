@@ -3,7 +3,12 @@
     .navbar {
         padding: 10px; 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        overflow: visible;
     }
 
     .navbar-links{
@@ -14,8 +19,22 @@
         gap: 20px;
     }
 
+    .navbar img {
+        height: 50px;
+        width: 50px; 
+    }
+    
     .navbar-links.open {
         display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        position: absolute;    /* drops down below navbar */
+        top: 70px;
+        left: 0;
+        background-color: #2C1A14;
+        padding: 1rem 0;
+        z-index: 999;
     }
 
     .hamburger {
