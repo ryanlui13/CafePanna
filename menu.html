@@ -26,7 +26,7 @@
 
 
 <div class="MENU" id="menu">
-    <h3> Featured </h3>
+    <h3> Featured Pints</h3>
     <div class="menu-table">
         <table>
             <tr> 
@@ -34,47 +34,132 @@
                 <th>Prices</th>
             </tr>
             <tr>
-                <th>Scoopy of the Day</th>
-                <th> $14.00</th>
+                <td>
+                    <div class="flavor">
+                        <span>Scoopy of the Day</span>
+                        <button type="button" class="add-to-cart" data-flavor="surprise-scoop" data-price="14.00">
+                            <img src="./images/CafePannaBackgroundImage.jpg" alt="Scoop of the day" class="menu-img">  
+                        </button>
+                    </div>
+                </td>   
+                <td class="price-cell">14.00 </td> 
             </tr>
             <tr>
-                <th>Aud's Dream</th>
-                <th> $14.00</th>
+                <td>
+                    <div class="flavor">
+                        <span>Aud's Dream</span>
+                        <button type="button" class="add-to-cart" data-flavor="aud's dream" data-price="14.00">
+                            <img src="./images/auddream.png" alt="aud's dream" class="menu-img">
+                        </button>
+                    </div>
+                    <td class="price-cell">14.00</td>
+                </td>
             </tr>
         </table>
     </div>
     
-    <h3> Pints and ice cream</h3>
+    <h3> Ice cream scoops</h3>
     <table class = "menu-table">
         <tr>
             <th>Classic flavors</th>
             <th>Price</th>
         </tr>
         <tr>
-            <th>chocolate</th>
-            <th>$5.00</th>
+            <td>
+                <div class="flavor">
+                    <span>chocolate</span>
+                    <button type="button" class="add-to-cart" data-flavor="chocolate" data-price="5.00">
+                        <img src="./images/chocolate.png" auto="chocolate" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">5.00</td>
         </tr>
         <tr>
-            <th>vanilla</th>
-            <th>$5.00</th>
+            <td>
+                <div class="flavor">
+                    <span>vanilla</span>
+                    <button type="button" class="add-to-cart" data-flavor="vanilla" data-price="5.00">
+                        <img src="./images/vanilla.png" auto="vanilla" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">5.00</td>
         </tr>
         <tr>
-            <th>red swirl (strawberry) </th>
-            <th> $5.00</th>
+            <td>
+                <div class="flavor">
+                    <span>red swirl </span>
+                    <button type="button" class="add-to-cart" data-flavor="red siwrl" data-price="5.00">
+                        <img src="./images/RedFlag.png" auto="red swirl (strawberry)" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">5.00</td>
         </tr>
         <tr>
-            <th> caffee bianco stracciatella</th>
-            <th> $6.00</th>
+            <td>
+                <div class="flavor">
+                    <span>cafe bianco stracciatella </span>
+                    <button type="button" class="add-to-cart" data-flavor="cafe Biancco Stracciatella" data-price="6.00">
+                        <img src="./images/cafeBiancoStracciatella.png" auto="cafe Bianco Stracciatella" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">6.00</td>
         </tr>
         <tr>
-            <th>surprise box</th>
-            <th>$6.00</th>
+            <td>
+                <div class="flavor">
+                    <span>surprise </span>
+                    <button type="button" class="add-to-cart" data-flavor="surprise box" data-price="6.00">
+                        <img src="./images/CafePannaBackgroundImage.jpg" auto="surprise box" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">6.00</td>
         </tr>
         <tr>
-            <th>Maple butter pecan</th>
-            <th> $6.00</th>
+            <td>
+                <div class="flavor">
+                    <span>Maple butter pecan </span>
+                    <button type="button" class="add-to-cart" data-flavor="maple butter pecan" data-price="7.00">
+                        <img src="./images/maplebutterpecan.png" auto="maple butter pecan" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">7.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="flavor">
+                    <span>Cookies 'n Panna'</span>
+                    <button type="button" class="add-to-cart" data-flavor="Cookies 'n Panna" data-price="7.00">
+                        <img src="./images/cookiesNpanna.png" auto="Cookies and Panna" class="menu-img">
+                    </button>
+                </div>
+            </td>
+            <td class="price-cell">7.00</td>
         </tr>
     </table>
+</div>
+
+<div id="shopping-cart-selection" class="cart-list">
+    <h2> Keep scooping...</h2>
+    <hr class="divider">
+    
+    <div id="cart-display">
+        <p class="empty-msg"> Your pint is empty. Want to start scooping up more flavors?</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="total-row">
+            <span> Total</span>
+            <span id="total"> $0.00 </span>
+        </div>
+        <button id="clear-cart-btn" onclick="clearCart()"> EMPTY CART </button>
+        <button class="checkout-btn"> Checkout</button>
+    </div>
 </div>
 
 <script src="CafePannaJavaScript.js"></script>
