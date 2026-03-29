@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // nav button
 const navbutton = document.getElementById('hamburger');
 const links = document.querySelector('.navbar-links');
