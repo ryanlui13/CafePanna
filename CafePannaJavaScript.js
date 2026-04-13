@@ -18,13 +18,14 @@ cartButtons.forEach(button => {
     button.addEventListener('click', () => {
         const flavor = button.getAttribute('data-flavor');
         const price = parseFloat(button.getAttribute('data-price'));
+        const image = button.querySelector('data-image'); 
         if (!flavor || isNaN(price)) return;
 
         const existItem = cart.find(item => item.name === flavor);
         if (existItem) {
             existItem.quantity += 1;
         } else {
-            cart.push({ name: flavor, price: price, quantity: 1 });
+            cart.push({ name: flavor, price: price, quantity: 1, image: image });
         }
 
         renderCart();
@@ -70,8 +71,11 @@ function renderCart() {
         html += `
             <li class="fancy-item">
                 <div class="item-main">
-                    <strong>${item.name}</strong>
-                    <br>$${item.price.toFixed(2)} each
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div>
+                        <strong>${item.name}</strong>
+                        <br>$${item.price.toFixed(2)} each
+                    </div>
                 </div>
                 <div class="qty-controls">
                     <button class="minus-btn" data-flavor="${item.name}">−</button>
@@ -104,3 +108,57 @@ function clearCart() {
     cart = [];
     renderCart();
 }
+
+//checkout form
+document.querySelector('.checkout-btn').addEventListener('click', () => {
+    //check to see if cart is empty
+    if (cart.length == 0) 
+    {
+        alert('add an item to your cart');
+        return; 
+    }
+    
+    //show the shopping cart and checkout 
+    document.getElementById('shopping-cart-selection').style.display = 'none';
+    document.getElementById('checkout-form').style.display = 'none';
+});
+
+//submitOrder()
+function submitOrder() 
+{
+    //form inputs
+    const name = document.getElementById('checkout-name').value;
+    const email = document.getElementById('checkout-email').value; 
+    const payment = document.getElementById('checkout-payment') 
+
+    //validate
+    if (!name || !email || !payment)
+    {
+        alert('fill in your info');
+        return; 
+    }
+
+    //hide the form and display confirm message
+    document.getElementById('checkout-form').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'block';
+    document.getElementById('confirm-message').innerHTML = 'Thanks ${name}! Your order is being processed. We will send an email to you at ${email}.';
+
+    //shopping is done. empty now...
+    cart = [];
+    renderCart();
+}
+
+//cancelOrder()
+function cancelOrder()
+{
+    if (cart.length == 0)
+    {
+        alert('add some flavors to your cart first');
+        return; 
+    }
+    
+    document.getElementById('shopping-cart-selection').style.display = 'none';
+    document.getElementById('checkout-form').style.display = 'block';
+}
+
+
